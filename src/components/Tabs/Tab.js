@@ -64,7 +64,8 @@ function MyTab(){
             height='100vh'
             display='flex'
             flexDirection="column"
-            sx={{bgcolor: '#261851'}}>
+            style={{background:"linear-gradient(90deg, #4B1B4A 0%, #2E2063 100%)"}}
+            >
             <AppBar position="static">
                 <Tabs
                 style={{background : "#0D052A"}}
@@ -86,28 +87,34 @@ function MyTab(){
 
              
             </AppBar>
-            <SwipeableViews
-                flex={1}
-                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                index={value}
-                onChangeIndex={handleChangeIndex}
-            > 
-                <TabPanel value={value} index={0} dir={theme.direction}>
-                    <BioPanel />
-                </TabPanel>
-                <TabPanel value={value} index={1} dir={theme.direction}>
-                    <EducationPanel />
-                </TabPanel>
-                <TabPanel value={value} index={2} dir={theme.direction}>
-                    <SkillPanel />
-                </TabPanel>
-                <TabPanel value={value} index={3} dir={theme.direction}>
-                    <WorkPanel />
-                </TabPanel>
-                <TabPanel value={value} index={4} dir={theme.direction}>
-                    <ProjectPanel />
-                </TabPanel>
-            </SwipeableViews>
+            <div style={{display:'flex',
+                alignItems: 'center',
+                justifyContent : 'center',
+                height: '100vh'}}>
+
+                <SwipeableViews
+                    flex={1}
+                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                    index={value}
+                    onChangeIndex={handleChangeIndex}
+                > 
+                    <TabPanel value={value} index={0} dir={theme.direction}>
+                        <BioPanel />
+                    </TabPanel>
+                    <TabPanel value={value} index={1} dir={theme.direction}>
+                        <EducationPanel />
+                    </TabPanel>
+                    <TabPanel value={value} index={2} dir={theme.direction}>
+                        <SkillPanel />
+                    </TabPanel>
+                    <TabPanel value={value} index={3} dir={theme.direction}>
+                        <WorkPanel />
+                    </TabPanel>
+                    <TabPanel value={value} index={4} dir={theme.direction}>
+                        <ProjectPanel />
+                    </TabPanel>
+                </SwipeableViews>
+            </div>
             </Box>
      
     )
