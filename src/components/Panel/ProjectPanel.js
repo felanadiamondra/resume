@@ -2,6 +2,9 @@
 const ProjectPanel = () => {
     return (
         
+
+        
+
         <div className="panel">
         <div className="panel-header">
             <h2 className="panel-title">Projects</h2>
